@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Михаил Киселев](https://up.htmlacademy.ru/htmlcss/27/user/1335517).
-* Наставник: [Екатерина Комнатная](https://htmlacademy.ru/profile/id215761).
+* Наставник: [Екатерина Комнатная :-))))](https://htmlacademy.ru/profile/id215761).
 
 ---
 
