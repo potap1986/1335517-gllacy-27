@@ -14,7 +14,7 @@
          <li><a href="catalog.html">Каталог</a>
              <ul class="accordeon">
              <li><a href="#">Новинки</a></li>
-             <li><a href="#">Сливочное</a></li>
+             <li><a href="catalog.html">Сливочное</a></li>
              <li><a href="#">Щербеты</a></li>
              <li><a href="#">Фпуктовый лед</a></li>
              <li><a href="#">Мелорин</a></li>
@@ -24,13 +24,47 @@
          <li><a href="#">О Компании</a></li>        
        </ul>
        <ul class="user-navigation">
-         <li class="search"><a href="#"></a></li>
-         <li class="login-link"><a href="#">Вход</a></li>
+         <li class="search"><a href="#"><span class="visually-hidden"> Поиск</span></a>
+          <section>
+            <h2 class="visually-hidden">Поиск по сайту</h2>
+            <form action="https://echo.htmlacademy.ru/courses" method="get">
+              <label for="search">Что ищем?</label>
+              <input id="search" type="search" name="search"  placeholder="Крем-брюле">
+              <button class="visually-hidden" type="submit">
+                Найти
+              </button>        
+            </form>
+          </section>
+         </li>
+         <li class="login-link"><a href="#">Вход</a>
+          <section>
+            <h2>Вход в личный кабинет</h2>
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <p>
+                <label class="visually-hidden" for="user-login">Электронная почта</label>
+                <input id="user-login" type="email" name="login" placeholder="email@example.com">
+              </p>
+              <p>
+                <label class="visually-hidden" for="user-password">Пароль</label>
+                <input id="user-password" type="password" name="password" placeholder="••••••••">
+              </p>
+              <p>
+                <a href="#">Забыли пароль?</a>
+              </p>
+              <p>
+                <a href="#">Новая регистрация</a>
+              </p>
+              <button type="submit">
+                Войти
+              </button>
+            </form>
+          </section>
+         </li>
          <li class="basket"><a href="#">Пусто</a></li>
        </ul>
        <p class="header-info">
          <span class="header-span">С 10 до 20 ежедневно</span>
-         8 812 450-25-25
+         <a href="#">8 812 450-25-25</a>
        </p>
        </nav>
     </header>
@@ -92,10 +126,10 @@
     <footer class="main-footer">
       <div class="footer-social">
         <ul>
-          <li><a class="social-button" href="#">Твиттер</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">В контакте</a></li>
+          <li><a class="social-button" href="#"><span class="visually-hidden">Твиттер</span></a></li>
+          <li><a class="social-button" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
+          <li><a class="social-button" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+          <li><a class="social-button" href="#"><span class="visually-hidden">В контакте</span></a></li>
         </ul>
       </div>
       <div class="footer-links">
@@ -107,46 +141,12 @@
         </ul>
      </div>    
       <div class="footer-copyright">
-        <img class="logo-copyrigth" src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy">
+        <a href="#"><img class="logo-copyrigth" src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy"></a>
         <p>
          Сделано в <a class="button" href="#">HTML Academy</a> © 2019
         </p>
       </div>
-    </footer>   
-
-    <section>
-      <h2 class="visually-hidden">Поиск по сайту</h2>
-      <form action="https://echo.htmlacademy.ru/courses" method="get">
-        <label for="search">Что ищем?</label>
-        <input id="search" type="search" name="search"  placeholder="Крем-брюле">
-        <button class="visually-hidden" type="submit">
-          Найти
-        </button>        
-      </form>
-    </section>
-
-    <section>
-      <h2>Вход в личный кабинет</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label class="visually-hidden" for="user-login">Электронная почта</label>
-          <input id="user-login" type="email" name="login" placeholder="email@example.com">
-        </p>
-        <p>
-          <label class="visually-hidden" for="user-password">Пароль</label>
-          <input id="user-password" type="password" name="password" placeholder="••••••••">
-        </p>
-        <p>
-          <a href="#">Забыли пароль?</a>
-        </p>
-        <p>
-          <a href="#">Новая регистрация</a>
-        </p>
-        <button type="submit">
-          Войти
-        </button>
-      </form>
-    </section>
+    </footer>         
 
     <section>
       <h2 class="visually-hidden">Форма обратной связи</h2>
