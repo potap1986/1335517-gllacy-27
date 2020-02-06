@@ -14,6 +14,19 @@ a {
   text-decoration: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .input {
   color: #999999;
   font-size: 16px;
@@ -21,7 +34,7 @@ a {
   background-color: #ffffff;
 }
 
-.input2 {
+.input-mini {
   color: #999999;
   font-size: 14px;
   line-height: 1.71;
@@ -42,11 +55,13 @@ a {
 
 .site-navigation a,
 .user-navigation a {
+  font-weight: 700;
   color: #ffffff;
 }
 
-.site-navigation>li {
-  border-bottom: solid 1px rgba(255,255,255, 0.2); 
+.site-navigation li {
+  text-decoration: underline;
+  text-decoration-color: rgba(255,255,255, 0.2);
   text-align: center;
   vertical-align: middle;
 } 
@@ -63,14 +78,16 @@ a {
  }
 
 .header-catalog-current a{
+  text-decoration-color: rgba(255,255,255, 0.01);
   background-color: #d07058;
 }
 
-.accordeon {
-  list-style: none;
+.accordeon {  
+  list-style: none;  
 }
 
-.accordeon a{
+.accordeon a {
+  text-decoration-color: rgba(255,255,255, 0.01);
   font: inherit;
   font-size: 14px;
   line-height: 1.14;
@@ -112,6 +129,7 @@ a {
 }
 
 .search, .login {
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
 }
 
@@ -140,8 +158,9 @@ a {
   background-color: #f8f7f4;
 }
 
-.backet1 {
+.backet-table {
   font-size: 13px;
+  font-weight: 400;
   line-height: 1.23;
   text-align: left;
   color: #323232;  
@@ -149,11 +168,20 @@ a {
   background-color: #f8f7f4;
 }
 
-td span {
+.backet-table a {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.23;
+  text-align: left;
+  color: #323232;    
+}
+
+.item-table {
   color: #999999;
 }
 
-.backet1 tr:last-child {
+.backet-table tr:last-child {
+  font-size: 15px;
   font-weight: 700;
 }
   
@@ -169,7 +197,7 @@ td span {
 
 .header-info {
   font: inherit;
-  text-align: right;
+  text-align: right;  
 }
 
 .header-span {
@@ -180,6 +208,7 @@ td span {
 .header-info a {
   color: #ffffff;
   font-size: 22px;
+  font-weight: 700;
   line-height: 1.09;
 }
 
@@ -219,12 +248,19 @@ td span {
   font-size: 16px;
   line-height: 1.38;
   color: #ffffff;
-  border-bottom: solid 1px rgba(255,255,255, 0.2); 
+  width: 260px;
+  text-decoration: underline;
+  text-decoration-color: rgba(255,255,255, 0.2);
   text-align: center;
   vertical-align: middle;
 }
 
+.catalog-item-image img {
+  border-radius: 50%;
+}
+
 .button-sale {
+  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
   font-size: 45px;
   font-weight: bold;
   line-height: 1;
@@ -274,8 +310,9 @@ td span {
 .text-link a {
   color: #323232;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.25;
+  text-align: left;
   text-decoration: underline; 
 }
 
@@ -291,6 +328,7 @@ td span {
 .form-sub button {
   color: #fefefe;
   font-size: 18px;
+  font-weight: 700;
   line-height: 1.33;
   box-shadow: 0px 2px 2px 0 var(--deep-red-64);
   background-image: linear-gradient(to top, #e74a35, #f26843);
@@ -311,15 +349,27 @@ td span {
   color: #ffffff;
 }
 
-.footer-link {
+.footer-link li:first-child {
   font-weight: 700;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.33;
+  text-align: left;
+  color: #fefefe;
 }
 
 .footer-copyright span {
   text-decoration: underline; 
 }
 
-.send-letter h2 {
+.send-letter {
+  background-color: #f8f7f4;
+}
+
+.send-letter p:first-of-type {
   font-size: 24px;
   font-weight: 500;
   line-height: 1.17;
@@ -327,9 +377,6 @@ td span {
   color: #323232;
 }
 
-.letter {
-  background-color: #f8f7f4;
-}
 
 .button-letter {
   font: inherit;
