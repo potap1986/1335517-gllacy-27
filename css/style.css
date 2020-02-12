@@ -1,6 +1,7 @@
 body {
-  margin: 0;
+  margin: auto;
   padding: 0;  
+  width: 1200px;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.38;
@@ -41,16 +42,62 @@ a {
   background-color: #ffffff;
 }
 
+.main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: auto;
+  margin-top: 9px; 
+  margin-right: 27px; 
+  margin-left: 27px; 
+  margin-bottom: 0px; 
+  padding: 0px; 
+}
+
+
 .main-navigation {
+  width: 1150px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0; 
+  align-items: center; 
   font-size: 16px;
   line-height: 1.13;
   color: #ffffff;
   background-color: #849d8f;
 }
 
-.site-navigation,
-.user-navigation {
+.logo-site-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;    
+}
+
+.main-header-logo {
+  order: 0;
+  width: 154px;
+  height: 64px;
+  margin-right: 24px;
+}
+
+.site-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;  
+  padding: 0;  
+  width: 349px;
   list-style: none;
+}
+
+.user-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;  
+  padding: 0;  
+  width: 245px;
+  list-style: none;  
 }
 
 .site-navigation a,
@@ -83,7 +130,8 @@ a {
 }
 
 .accordeon {  
-  list-style: none;  
+  list-style: none; 
+  padding: 0; 
 }
 
 .accordeon a {
@@ -196,13 +244,17 @@ a {
 }
 
 .header-info {
+  margin: 0;  
+  padding: 0;
+  width: 170px;
   font: inherit;
-  text-align: right;  
+  text-align: right; 
+  white-space: normal;   
 }
 
 .header-span {
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.14;  
 }
 
 .header-info a {
@@ -212,7 +264,44 @@ a {
   line-height: 1.09;
 }
 
+/*Каталог*/
+
+.container-catalog {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: auto;
+  margin-top: 0px;
+  margin-right: 27px; 
+  margin-left: 27px; 
+  margin-bottom: 0px; 
+  padding: 0px; 
+}
+
+.filters {
+  height: 130px;
+  width: 100%;
+  background-color: violet;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  margin-top: 0px; 
+  margin-right: 27px; 
+  margin-left: 27px; 
+  margin-bottom: 0px; 
+  padding: 0px; 
+}
+
 .breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -222,8 +311,7 @@ a {
   color: #ffffff;
   text-decoration: underline;
   text-decoration-color: rgba(255,255,255, 0.2);
-  text-align: left;
-  vertical-align: middle;
+  text-align: left;  
 }
 
 .breadcrumbs-current {
@@ -242,6 +330,17 @@ a {
 }
 
 .catalog-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: auto;
+  margin-top: 0px; 
+  margin-right: 0px; 
+  margin-left: 0px; 
+  margin-bottom: 0px; 
+  padding: 0px; 
   list-style: none;
 }
 
@@ -278,29 +377,84 @@ a {
   color: #ffffff;
 }
 
+.nav-catalog {
+  align-self: flex-end;
+  width: 181px;
+  height: 26px;
+  background-color: violet;
+}
+
+.beautiful-block {
+  min-height: 1165px;
+  width: 1146px;
+  background-color: violet;
+}
+
 .main-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: #323232;
+  height: 306px;
   background-color: blanchedalmond;
   background-image: url("../img/fon2.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
-}
-
-.advantages {
-  list-style: none;
+  border-radius: 15px;
 }
 
 .page-info {
+  margin-top: 28px;
+  margin-right: 112px;
+  width: 1013px;
+  margin-left: 20px;
+  margin-bottom: 0px;
   font-size: 24px;
   font-weight: 500;
   line-height: 1.25;
 }
 
+.advantages {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: 33px;
+  margin-left: 77px;
+  margin-bottom: 26px;
+  padding: 0;
+  list-style: none;
+}
+
+.item-advantiges {
+  padding: 0;
+  margin: 0;
+  width: 475px;
+}
+
+.item-advantiges:nth-child(2n) {
+  margin-left: 91px;
+  width: 470px;  
+}
+
+.news-sub {  
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 40px;
+  padding-left: 0px; 
+  padding-right: 0px;
+  padding-bottom: 39px;  
+}  
+
 .news {
+  width: 560px;
+  height: 220px;
   background-color: #ffffff;
   background-image: url("../img/fon-news.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
+  border-radius: 15px;
 }
 
 .news-blog {
@@ -319,7 +473,10 @@ a {
 }
 
 .form-sub {
+  width: 560px;
+  height: 220px;
   background-color: #f8f7f4;
+  border-radius: 15px;
 }
 
 .form-sub p {
@@ -336,8 +493,21 @@ a {
   background-image: linear-gradient(to top, #e74a35, #f26843);
 }
 
+.map-block {
+  width: 1200px;
+  height: 430px;
+  background-color: violet;
+}
+ 
 .main-footer {
+  display: flex;
+  justify-content: space-between;
   text-decoration: none;
+  margin-top: 18px; 
+  margin-right: 27px; 
+  margin-left: 27px; 
+  margin-bottom: 0px; 
+  padding: 0px; 
 }
 
 .main-footer li {
