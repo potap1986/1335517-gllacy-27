@@ -15,22 +15,21 @@
             <img src="img/gllacy.svg" width="154" height="64" alt="Логотип Gllacy Shop">
           </a>
           <ul class="site-navigation">
-            <li class="header-catalog"><a href="catalog.html">Каталог</a>
+            <li class="header-catalog"><a href="catalog.html"><span class="menu-under-line">Каталог</span></a>
               <ul class="accordeon"> 
-                <li><a href="#">Новинки</a><hr></li>
-                
+                <li><a class="first-accordeon" href="#">Новинки</a></li>                
                 <li><a href="catalog.html">Сливочное</a></li>
                 <li><a href="#">Щербеты</a></li>
                 <li><a href="#">Фпуктовый лед</a></li>
                 <li><a href="#">Мелорин</a></li>
               </ul>
             </li>
-            <li><a href="#">Доставка и оплата</a></li>
-            <li><a href="#">О Компании</a></li>        
+            <li class="header-catalog"><a href="#"><span class="menu-under-line">Доставка и оплата</span></a></li>
+            <li class="header-catalog"><a href="#"><span class="menu-under-line">О Компании</span></a></li>        
           </ul>
         </div>       
        <ul class="user-navigation">
-         <li class="button search-button"><a class="search" href="#"><span class="visually-hidden">Поиск</span>
+         <li class="button search-button"><a class="user-menu  search" href="#"><span class="visually-hidden">Поиск</span>
                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17">
                 <g fill="#FFF">
                   <path d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
@@ -48,7 +47,7 @@
             </form>
           </section>
          </li>
-         <li class="button login-button"><a class="login-link" href="#">
+         <li class="button login-button"><a class="user-menu login-link" href="#">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19">
               <g fill="#FFF">
                 <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/>
@@ -68,22 +67,18 @@
                 <input class="input-mini" id="user-password" type="password" name="password" placeholder="••••••••">
               </p>              
               <div>
-                <button class="button-login" type="submit">
+                <button class="button-orange button-login" type="submit">
                   Войти
                 </button>
-                <div>
-                  <p>
-                    <a href="#">Забыли пароль?</a>
-                  </p>
-                  <p>
-                   <a href="#">Новая регистрация</a>
-                  </p>
+                <div class="login-help"> 
+                  <a href="#"><span class="under-line-black">Забыли пароль?</span></a>                  
+                  <a href="#"><span class="under-line-black">Новая регистрация</span></a>                
                 </div>               
               </div>              
             </form>
           </section>
          </li>
-         <li class="button"><a class="basket" href="#">
+         <li class="button"><a class="user-menu basket" href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
             <g fill="#FFF">
                 <path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/>
@@ -108,10 +103,112 @@
 
       
         <div class="beautiful-block">
-        <!-- Незнакомый блок   -->
-        </div>
-  
-  
+          <section class="slider">
+            <div class="slider-controls">
+              <label for="product-1"> Первый </label>
+              <label for="product-2"> Второй </label>
+              <label for="product-3"> Третий </label>
+            </div>
+            <ul class="slider-list">
+              <li class="slider-item slide" id="slide1">
+                <h3 class="slide-title">
+                  Крем-брюле и пломбир с малиновым джемом
+                </h3>
+                <a class="button slide-button" href="#">Давайте оба!</a>
+              </li>
+              <li class="slider-item slide" id="slide2">
+                <h3 class="slide-title">
+                  Шоколадный пломбир и лимонный сорбет
+                </h3>
+                <a class="button slide-button" href="#">Давайте оба!</a>
+              </li>
+              <li class="slider-item slide" id="slide3">
+                <h3 class="slide-title">
+                  Пломбир с помадкой и клубничный щербет
+                </h3>
+                <a class="button slide-button" href="#">Давайте оба!</a>
+              </li>
+            </ul>
+          </section>
+          <div class="free-toppings">
+            <section class="topping raspberries">
+              <h3> Малинка даром!</h3>
+              <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+              <div class="position-button"><a class="button-orange want-raspberries">Хочу варенье!</a></div>
+            </section>
+            <section class="topping chocolate">
+              <h3>Шоколадки даром!</h3>
+              <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно. </p>
+              <div class="position-button"><a class="button-orange want-chocolate">Хочу шоколадки!</a></div>
+            </section>
+          </div>
+          <ul class="catalog-list hit-list">
+            <li class="catalog-item"> <!-- 1-->
+              <a class="catalog-category" href="#">
+                <h3>    
+                  <span class="under-line">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>           
+                </h3>                         
+              </a>   
+              <p class="catalog-item-image">        
+                  <img src="img/product1.jpg" width="267" height="267" alt=""> 
+              </p>            
+              <p class="catalog-item-price">
+                <a class="button-sale" href="#">
+                  310 <span class="small-text">/кг</span>
+                </a>            
+              </p>
+                <button class="button-orange fast-see" type="submit">Быстрый просмотр</button>
+            </li>
+            <li class="catalog-item"> <!-- 2-->
+               <a class="catalog-category" href="#">
+                 <h3>              
+                  <span class="under-line">Сливочно-кофейное с кусочками шоколада </span>            
+                 </h3>              
+               </a>  
+               <p class="catalog-item-image">     
+                  <img src="img/product2.jpg" width="267" height="267" alt="">              
+               </p>          
+               <p class="catalog-item-price">
+                 <a class="button-sale" href="#">
+                  380 <span class="small-text">/кг</span>
+                 </a>            
+               </p>
+                <button class="button-orange fast-see" type="submit">Быстрый просмотр</button>
+             </li>
+             <li class="catalog-item"> <!-- 3-->
+               <a class="catalog-category" href="#">
+                 <h3>              
+                  <span class="under-line">Сливочно-клубничное с присыпкой из белого шоколада</span>            
+                 </h3>              
+               </a>
+               <p class="catalog-item-image">       
+                 <img src="img/product3.jpg" width="267" height="267" alt="">           
+               </p>            
+               <p class="catalog-item-price">
+                 <a class="button-sale" href="#">
+                  355 <span class="small-text">/кг</span>
+                 </a>            
+               </p>
+                <button class="button-orange fast-see" type="submit">Быстрый просмотр</button>
+             </li>
+             <li class="catalog-item"> <!-- 4-->
+               <a class="catalog-category" href="#">
+                 <h3>
+                  <span class="under-line">Сливочное крем-брюле с карамельной подливкой</span>        
+                 </h3>              
+               </a>   
+               <p class="catalog-item-image">           
+                 <img src="img/product4.jpg" width="267" height="267" alt="">         
+               </p>          
+               <p class="catalog-item-price">
+                 <a class="button-sale" href="#">
+                   415 <span class="small-text">/кг</span>
+                 </a>            
+               </p>
+                <button class="button-orange fast-see" type="submit">Быстрый просмотр</button>
+             </li>
+          </ul>         
+        </div>  
         <section class="main-info">
           <h2 class="page-info">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
           <ul class="advantages">
@@ -166,7 +263,7 @@
           <section class="news"> 
             <h2 class="visually-hidden">Новости</h2>
             <h3 class="news-blog">Новое в нашем блоге</h3>
-            <p class="text-link"><a href="#">10 способов сервировки фруктовых щербетов к столу</a></p>
+            <p class="text-link"><a href="#"><span class="big-under-line-black">10 способов сервировки фруктовых щербетов к столу</span></a></p>
           </section>
           <aside class="form-sub">
             <h2 class="visually-hidden">Подписка на рассылку</h2>
@@ -176,7 +273,7 @@
             <form action="https://echo.htmlacademy.ru" method="post">
               <label class="visually-hidden" for="email2">Электронная почта</label>
               <input  class="input" id="email2" type="email" name="email2" placeholder="email@example.com">            
-              <button type="submit">Отправить</button>
+              <button class="button-orange" type="submit">Отправить</button>
             </form>     
           </aside>
         </div>        
@@ -185,8 +282,19 @@
       
 
       <div class="map-block">
-
-        <!-- Блок с картой-->
+        <h3 class="visually-hidden">Адрес офиса и телефон</h3>
+        <section class="contact-address">
+          <article class="map-address">
+            <p>Адрес главного офиса и офлайн-магазина:</p>
+            <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
+          </article>
+          <article class="map-contact">
+            <p>Для заказов по телефону:</p>
+            <span>8 812 450-25-25</span>
+            <p>(с 10 до 20 ежедневно)</p>
+          </article>
+          <button class="button-orange">Форма обратной связи</button>
+        </section>
       </div>
       
       
@@ -203,16 +311,16 @@
       </div>
       <div class="footer-links">
         <ul class="footer-link">
-          <li><a href="#">Для поставщиков</a></li>
-          <li><a href="#">Наши документы</a></li>
-          <li><a href="#">О производстве</a></li>
-          <li><a href="#">Экологические стандарты</a></li>
+          <li><a href="#"><span class="under-line">Для поставщиков</span></a></li>
+          <li><a href="#"><span class="under-line">Наши документы</span></a></li>
+          <li><a href="#"><span class="under-line">О производстве</span></a></li>
+          <li><a href="#"><span class="under-line">Экологические стандарты</span></a></li>
         </ul>
      </div>    
       <div class="footer-copyright">
         <a href="#"><img class="logo-copyrigth" src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy"></a>
         <p>
-         Сделано в <span><a  href="#">HTML Academy</a></span> © 2019
+         Сделано в <a  href="#"><span class="under-line">HTML Academy</span></a> © 2019
         </p>
       </div>
     </footer>         
@@ -233,7 +341,7 @@
           <label class="visually-hidden" for="letter">Текст обращения</label>
           <textarea class="input input-letter" name="letter" id="letter" rows="7" placeholder="Напишите что-нибудь..."></textarea>
         </p>        
-        <div><button class="button-letter" type="submit">Отправить</button></div>        
+        <div><button class="button-orange button-letter" type="submit">Отправить</button></div>        
       </form> 
       <button class="close" type="button">
         <span class="visually-hidden">Закрыть</span>
