@@ -103,7 +103,7 @@
                 <td>1,5 кг х <span class="item-table">300 руб.</span></td>
                 <td>450 руб.</td>
               </tr>   
-               <tr class="line-table">   </tr>          
+               <tr class="line-table">   <td></td></tr>          
             </table>
             <div class="td-last-child">Итого: 750 руб.</div>
             <div class="position-button"><a class="button-orange button-sale-backet" href="#">Оформить заказ</a></div>
@@ -131,41 +131,48 @@
           <div class="sprting">
             <p>Сортировка: </p>
             <div class="filter-input">
-              <select name="sprting">
-                <option valie="reting">по популярности</option>
-                <option valie="name">по имени</option>
-                <option valie="price">по цене</option>
+              <select class="sprting-select" name="sprting">
+                <option value="reting">по популярности</option>
+                <option value="name">по имени</option>
+                <option value="price">по цене</option>
               </select> 
             </div>                       
-          </div>
-          <div class="price">
-            <p><label for="price">Цена: 100 руб. - 500 руб.</label></p>
-            <div class="filter-input">
-              <input type="range" id="price" name="price" min="0" max="700" step="5">
-            </div>            
-          </div>
+          </div>          
+          <div class="filter-range">
+            <div class="price-controls">Цена:            
+              <label class="min-price"><input type="text" name="min-price" value="100">руб.</label>
+              <label class="max-price">– <input type="text" name="max-price" value="500">руб.</label>
+            </div>
+            <div class="filter-input range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
+            </div>
+          </div>  
           <div class="fat">
             <p>Жирность</p>
-            <div  class="filter-input">
-              <label><input type="radio" name="fat" value="0"> 0% </label>
-              <label><input type="radio" name="fat" value="10" checked>до 10% </label>
-              <label><input type="radio" name="fat" value="30"> до 30%</label>
-              <label><input type="radio" name="fat" value=">30">выше 30%</label>
+            <div  class="filter-input for-radio">
+              <input class="visually-hidden filter-input-radio" type="radio" name="fat" id="0" value="0"><label for="0"> 0% </label>
+              <input class="visually-hidden filter-input-radio" type="radio" name="fat" id="10" value="10" checked><label for="10"> до 10% </label>
+              <input class="visually-hidden filter-input-radio" type="radio" name="fat" id="30" value="30"><label for="30"> до 30%</label>
+              <input class="visually-hidden filter-input-radio" type="radio" name="fat" id=">30" value=">30"><label for=">30"> выше 30%</label>
             </div>                     
           </div>
           <div class="topping-filter">
             <p>Наполнители:</p>
-            <div  class="filter-input">
+            <div  class="filter-input for-checkbox">
               <fieldset>
-                <input type="checkbox" name="topping-filter" value="chocolate" id="chocolate" checked>
+                <input  class="visually-hidden filter-input-checkbox" type="checkbox" name="topping-filter" value="chocolate" id="chocolate" checked>
                 <label for="chocolate">шоколадные</label>
-                <input type="checkbox" name="topping-filter" value="sugar" id="sugar" checked>
+                <input  class="visually-hidden filter-input-checkbox" type="checkbox" name="topping-filter" value="sugar" id="sugar" checked>
                 <label for="sugar">сахарные присыпки</label>
-                <input type="checkbox" name="topping-filter" value="fruit" id="fruit">
+                <input  class="visually-hidden filter-input-checkbox" type="checkbox" name="topping-filter" value="fruit" id="fruit">
                 <label for="fruit">фрукты </label>
-                <input type="checkbox" name="topping-filter" value="syrup" id="syrup">
+                <input  class="visually-hidden filter-input-checkbox" type="checkbox" name="topping-filter" value="syrup" id="syrup">
                 <label for="syrup">сиропы</label>
-                <input type="checkbox" name="topping-filter" value="jam" id="jam">
+                <input  class="visually-hidden filter-input-checkbox" type="checkbox" name="topping-filter" value="jam" id="jam">
                 <label for="jam">джемы</label>                 
               </fieldset>                          
             </div>            
@@ -375,8 +382,13 @@
       </section>
       
       <div class="nav-catalog">
-            <!-- Здесь будет навигация по страницам-->   
-
+        <ul class="pagination-list">
+         <li class="pagination-item pagination-item-current"><a>1</a></li>
+         <li class="pagination-item"><a href="#">2</a></li>
+         <li class="pagination-item"><a href="#">3</a></li>
+         <li class="pagination-item"><a href="#">4</a></li>
+         <li class="pagination-item"><a href="#">5</a></li>
+        </ul>
       </div>
 
       <hr class="delimetr">
