@@ -279,21 +279,24 @@
               </aside>
             </div>        
           </div>      
-          <div class="map-block">
-            <h3 class="visually-hidden">Адрес офиса и телефон</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="1200" height="430" allowfullscreen></iframe>
-            <section class="contact-address">
-              <article class="map-address">
-                <p>Адрес главного офиса и офлайн-магазина:</p>
-                <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
-              </article>
-              <article class="map-contact">
-                <p>Для заказов по телефону:</p>
-                <span>8 812 450-25-25</span>
-                <p>(с 10 до 20 ежедневно)</p>
-              </article>
-              <button class="button-orange send-letter-link">Форма обратной связи</button>
-            </section>
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" height="430" allowfullscreen></iframe>
+            <div class="map-block">
+              <h3 class="visually-hidden">Адрес офиса и телефон</h3>              
+              <section class="contact-address">
+                <article class="map-address">
+                  <p>Адрес главного офиса и офлайн-магазина:</p>
+                  <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
+                </article>
+                <article class="map-contact">
+                  <p>Для заказов по телефону:</p>
+                  <span>8 812 450-25-25</span>
+                  <p>(с 10 до 20 ежедневно)</p>
+                </article>
+                <button class="button-orange send-letter-link">Форма обратной связи</button>
+              </section>
+            </div>
+
           </div>
         </main>
         <footer class="main-footer">
@@ -322,37 +325,37 @@
         </footer>   
     </div>
      
-
     <section class="send-letter">
-      <h2 class="visually-hidden">Форма обратной связи</h2>
-      <p>Мы обязательно вам ответим!</p>
-      <form class="letter" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label class="visually-hidden" for="name">Ваше имя</label>
-          <input class="input input-name" id="name" type="text" name="name" placeholder="Иван Иванов">
-        </p>
-        <p>
-          <label class="visually-hidden" for="email1">Электронная почта</label>
-          <input class="input input-email" id="email1" type="email" name="email1" placeholder="email@example.com">
-        </p>
-        <p>
-          <label class="visually-hidden" for="letter">Текст обращения</label>
-          <textarea class="input input-letter" name="letter" id="letter" rows="7" placeholder="Напишите что-нибудь..."></textarea>
-        </p>        
-        <div><button class="button-orange button-letter" type="submit">Отправить</button></div>        
-      </form> 
-      <button class="close" type="button">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
+      <div class="modal-window">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <p>Мы обязательно вам ответим!</p>
+        <form class="letter" action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label class="visually-hidden" for="name">Ваше имя</label>
+            <input class="input input-name" id="name" type="text" name="name" placeholder="Иван Иванов">
+          </p>
+          <p>
+            <label class="visually-hidden" for="email1">Электронная почта</label>
+            <input class="input input-email" id="email1" type="email" name="email1" placeholder="email@example.com">
+          </p>
+          <p>
+            <label class="visually-hidden" for="letter">Текст обращения</label>
+            <textarea class="input input-letter" name="letter" id="letter" rows="7" placeholder="Напишите что-нибудь..."></textarea>
+          </p>        
+          <div><button class="button-orange button-letter" type="submit">Отправить</button></div>        
+        </form> 
+        <button class="close" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>        
+      </div>      
     </section>
-
-
 
 
     <script>
       var link = document.querySelector(".send-letter-link");
 
       var popup = document.querySelector(".send-letter");
+      var popup1 = document.querySelector(".modal-window");
 
       var close = popup.querySelector(".close");
 
@@ -375,6 +378,7 @@
       link.addEventListener("click", function (evt) {
         evt.preventDefault();
         popup.classList.add("modal-show");
+        popup1.classList.add("modal-show1");
 
         if (storage) {
         name.value = storage;
@@ -394,6 +398,7 @@
       close.addEventListener("click", function (evt) {
        evt.preventDefault();
        popup.classList.remove("modal-show");
+       popup1.classList.remove("modal-show1");
        popup.classList.remove("modal-error");
       });
 
@@ -416,6 +421,7 @@
           evt.preventDefault();
            if (popup.classList.contains("modal-show")) {
             popup.classList.remove("modal-show");
+            popup1.classList.remove("modal-show1");
             popup.classList.remove("modal-error");
           }
         }
