@@ -694,7 +694,8 @@ div .button-sale-backet {
   margin-right: 12px;
   margin-bottom: 18px;
 }
-.filter-form p {
+.filter-headings {
+  display: block;
   margin-bottom: 6px;
   padding-left: 16px;
   font-size: 14px;
@@ -706,7 +707,7 @@ div .button-sale-backet {
   background-color: rgba(255,255,255, 0.2);
   border-radius: 18px;    
 }
-.sprting-select {
+.sorting-select {
   width: 180px;
   padding-left: 16px;
   padding-right: 15px;
@@ -720,10 +721,10 @@ div .button-sale-backet {
   border: none;    
   cursor: pointer;
 }
-.sprting div {
+.sorting div {
   position: relative;
 }
-.sprting div::after {
+.sorting div::after {
   position: absolute;
   right: 18px;
   top: 10px;
@@ -733,10 +734,10 @@ div .button-sale-backet {
   color: inherit;    
   pointer-events: none;
 }
-.sprting-select::-ms-expand {
+.sorting-select::-ms-expand {
   display: none;
 }
-.sprting div:hover .sprting-select, .sprting div:focus .sprting-select, .sprting div:hover, .sprting div:focus {
+.sorting div:hover .sorting-select, .sorting div:focus .sorting-select, .sorting div:hover, .sorting div:focus {
   color: #323232;
 }
 .filter-range {
@@ -861,7 +862,7 @@ div .button-sale-backet {
   border-radius: 50%;
 }
 .filter-input fieldset {    
-  width: 686px;
+  width: 687px;
   padding: 0;
   background-color: rgba(255,255,255, 0);
   border: none;

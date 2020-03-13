@@ -135,10 +135,10 @@
 				<section class="filters">
 					<h2 class="visually-hidden">Фильтр товаров</h2>
 					<form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
-						<div class="sprting">
-							<p class="zero-padding">Сортировка: </p>
+						<div class="sorting">
+							<label for="sorting-select" class="zero-padding filter-headings">Сортировка: </label>
 							<div class="filter-input">
-								<select class="sprting-select" name="sprting">
+								<select class="sorting-select" id="sorting-select" name="sorting">
 									<option label="по популярности" value="reting">по популярности</option>
 									<option label="по имени" value="name">по имени</option>
 									<option label="по цене" value="price">по цене</option>
@@ -159,7 +159,7 @@
 							</div>
 						</div>
 						<div class="fat">
-							<p class="zero-padding">Жирность</p>
+							<p class="zero-padding filter-headings">Жирность</p>
 							<div class="filter-input for-radio">
 								<input class="visually-hidden filter-input-radio" type="radio" name="fat" id="0" value="0"><label for="0"> 0% </label>
 								<input class="visually-hidden filter-input-radio" type="radio" name="fat" id="10" value="10" checked><label for="10"> до 10% </label>
@@ -168,7 +168,7 @@
 							</div>
 						</div>
 						<div class="topping-filter">
-							<p class="zero-padding">Наполнители:</p>
+							<p class="zero-padding filter-headings">Наполнители:</p>
 							<div class="filter-input for-checkbox">
 								<fieldset>
 									<input class="visually-hidden filter-input-checkbox" type="checkbox" name="topping-filter" value="chocolate" id="chocolate" checked><label for="chocolate">шоколадные</label>
